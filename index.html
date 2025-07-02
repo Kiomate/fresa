@@ -5,171 +5,230 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FresaLime - Limonada de Fresa</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      color: #333;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    nav {
-      background-color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #d72638;
-    }
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d72638;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-    nav ul li a:hover {
-      color: #d72638;
-    }
+nav ul li a:hover {
+  color: #d72638;
+}
 
-    .hero {
-      position: relative;
-      padding: 3rem 1rem;
-      text-align: center;
-      background: #fff0f5;
-    }
+.hero {
+  position: relative;
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #fff0f5;
+}
 
-    .hero img {
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
-    }
+.hero img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
 
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #d72638;
-      margin-bottom: 0.5rem;
-    }
+.hero h1 {
+  font-size: 2.5rem;
+  color: #d72638;
+  margin-bottom: 0.5rem;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
 
-    .btn {
-      padding: 0.8rem 1.5rem;
-      border: 2px solid #d72638;
-      color: #d72638;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #d72638;
+  color: #d72638;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    .btn:hover {
-      background-color: #d72638;
-      color: white;
-    }
+.btn:hover {
+  background-color: #d72638;
+  color: white;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
-    .section-title {
-      font-size: 2rem;
-      text-align: center;
-      color: #d72638;
-      margin-bottom: 1.5rem;
-    }
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #d72638;
+  margin-bottom: 1.5rem;
+}
 
-    section {
-      scroll-margin-top: 100px;
-    }
+section {
+  scroll-margin-top: 100px;
+}
 
-    .ingredients ul {
-      list-style: square;
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
+.ingredients ul {
+  list-style: square;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
 
-    .benefits {
-      background: #fffaf0;
-      padding: 2rem;
-      border-radius: 10px;
-    }
+.benefits {
+  background: #fffaf0;
+  padding: 2rem;
+  border-radius: 10px;
+}
 
-    .testimonial-box {
-      background: #fce4ec;
-      border-left: 4px solid #d72638;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-    }
+.testimonial-box {
+  background: #fce4ec;
+  border-left: 4px solid #d72638;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
 
-    .cta {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 2rem;
-      background-color: #fcd5ce;
-      border-radius: 10px;
-    }
+.cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fcd5ce;
+  border-radius: 10px;
+}
 
-    .cta h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #d72638;
-    }
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #d72638;
+}
 
-    .cta p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #333;
-    }
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
 
-    .cta .btn {
-      display: inline-block;
-      margin-top: 0.5rem;
-      transition: all 0.3s ease;
-      background-color: transparent;
-    }
+.cta .btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
 
-    .cta .btn:hover {
-      transform: scale(1.05);
-      background-color: #d72638;
-      color: #fff;
-    }
+.cta .btn:hover {
+  transform: scale(1.05);
+  background-color: #d72638;
+  color: #fff;
+}
 
-    footer {
-      background: #333;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
+footer {
+  background: #333;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ----------- Estilos responsivos para móvil ----------- */
+
+@media (max-width: 600px) {
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none; /* inicialmente oculto */
+  }
+
+  /* Para mostrar el menú (puedes usar JavaScript o quitar display none para probar) */
+  nav ul.active {
+    display: flex;
+  }
+
+  nav {
+    padding: 1rem;
+    position: relative;
+  }
+
+  nav .logo {
+    font-size: 1.3rem;
+  }
+
+  .hero img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+  }
+}
+
   </style>
 </head>
 <body>
